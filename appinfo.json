@@ -1,0 +1,37 @@
+{
+    "appKeys": {},
+    "longName": "Helvetica Text",
+    "uuid": "6bdc5e04-781a-44ac-aec9-29d307d9570f",
+    "versionLabel": "1.0.0",
+    "companyName": "Jason Puglisi",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/Helvetica-Normal.ttf",
+                "type": "font",
+                "name": "FONT_HELVETICA_30",
+                "characterRegex": "[a-z']"
+            },
+            {
+                "file": "fonts/Helvetica-Normal.ttf",
+                "type": "font",
+                "name": "FONT_HELVETICA_18",
+                "characterRegex": "[a-z0-9 ]"
+            },
+            {
+                "file": "fonts/Helvetica-Bold.ttf",
+                "type": "font",
+                "name": "FONT_HELVETICA_BOLD_30",
+                "characterRegex": "[a-z]"
+            }
+        ]
+    },
+    "watchapp": {
+        "watchface": true
+    },
+    "capabilities": [
+        ""
+    ],
+    "shortName": "Helvetica Text",
+    "versionCode": 1
+}
