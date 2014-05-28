@@ -96,36 +96,45 @@ void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
       switch (one) {
         case 0:
           strcpy(time2_buffer, "ten");
+          strcpy(time3_buffer, "");
           break;
         case 1:
           strcpy(time2_buffer, "eleven");
+          strcpy(time3_buffer, "");
           break;
         case 2:
           strcpy(time2_buffer, "twelve");
+          strcpy(time3_buffer, "");
           break;
         case 3:
           strcpy(time2_buffer, "thirteen");
+          strcpy(time3_buffer, "");
           break;
         case 4:
-          strcpy(time2_buffer, "fourteen");
+          strcpy(time2_buffer, "four");
+          strcpy(time3_buffer, "teen");
           break;
         case 5:
           strcpy(time2_buffer, "fifteen");
+          strcpy(time3_buffer, "");
           break;
         case 6:
-          strcpy(time2_buffer, "sixteen");
+          strcpy(time2_buffer, "six");
+          strcpy(time3_buffer, "teen");
           break;
         case 7:
-          strcpy(time2_buffer, "seventeen");
+          strcpy(time2_buffer, "seven");
+          strcpy(time3_buffer, "teen");
           break;
         case 8:
           strcpy(time2_buffer, "eighteen");
+          strcpy(time3_buffer, "");
           break;
         case 9:
-          strcpy(time2_buffer, "nineteen");
+          strcpy(time2_buffer, "nine");
+          strcpy(time3_buffer, "teen");
           break;
       }
-      strcpy(time3_buffer, "");
     } else {
       switch (ten) {
         case 2:
@@ -211,40 +220,40 @@ void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
     int mon = tick_time->tm_mon;
     switch (mon) {
       case 0:
-        strcpy(mon_buffer, "january");
+        strcpy(mon_buffer, "jan");
         break;
       case 1:
-        strcpy(mon_buffer, "february");
+        strcpy(mon_buffer, "feb");
         break;
       case 2:
-        strcpy(mon_buffer, "march");
+        strcpy(mon_buffer, "mar");
         break;
       case 3:
-        strcpy(mon_buffer, "april");
+        strcpy(mon_buffer, "apr");
         break;
       case 4:
         strcpy(mon_buffer, "may");
         break;
       case 5:
-        strcpy(mon_buffer, "june");
+        strcpy(mon_buffer, "jun");
         break;
       case 6:
-        strcpy(mon_buffer, "july");
+        strcpy(mon_buffer, "jul");
         break;
       case 7:
-        strcpy(mon_buffer, "august");
+        strcpy(mon_buffer, "aug");
         break;
       case 8:
-        strcpy(mon_buffer, "september");
+        strcpy(mon_buffer, "sep");
         break;
       case 9:
-        strcpy(mon_buffer, "october");
+        strcpy(mon_buffer, "oct");
         break;
       case 10:
-        strcpy(mon_buffer, "november");
+        strcpy(mon_buffer, "nov");
         break;
       case 11:
-        strcpy(mon_buffer, "december");
+        strcpy(mon_buffer, "dec");
         break;
     }
     
@@ -253,32 +262,32 @@ void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 }
 
 void window_load(Window *window) {
-  time1_text_layer = text_layer_create(GRect(2, 15, 140, 64));
+  time1_text_layer = text_layer_create(GRect(3, 3, 141, 64));
   text_layer_set_background_color(time1_text_layer, GColorClear);
   text_layer_set_text_color(time1_text_layer, GColorBlack);
-  text_layer_set_font(time1_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_BOLD_30)));
+  text_layer_set_font(time1_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_BOLD_38)));
   text_layer_set_text(time1_text_layer, time1_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) time1_text_layer);
   
-  time2_text_layer = text_layer_create(GRect(2, 50, 140, 64));
+  time2_text_layer = text_layer_create(GRect(3, 42, 141, 64));
   text_layer_set_background_color(time2_text_layer, GColorClear);
   text_layer_set_text_color(time2_text_layer, GColorBlack);
-  text_layer_set_font(time2_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_30)));
+  text_layer_set_font(time2_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_38)));
   text_layer_set_text(time2_text_layer, time2_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) time2_text_layer);
   
-  time3_text_layer = text_layer_create(GRect(2, 85, 140, 64));
+  time3_text_layer = text_layer_create(GRect(3, 80, 141, 64));
   text_layer_set_background_color(time3_text_layer, GColorClear);
   text_layer_set_text_color(time3_text_layer, GColorBlack);
-  text_layer_set_font(time3_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_30)));
+  text_layer_set_font(time3_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_38)));
   text_layer_set_text(time3_text_layer, time3_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) time3_text_layer);
   
-  date_text_layer = text_layer_create(GRect(2, 138, 140, 30));
+  date_text_layer = text_layer_create(GRect(0, 135, 138, 30));
   text_layer_set_background_color(date_text_layer, GColorClear);
   text_layer_set_text_color(date_text_layer, GColorBlack);
   text_layer_set_text_alignment(date_text_layer, GTextAlignmentRight);
-  text_layer_set_font(date_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_18)));
+  text_layer_set_font(date_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_22)));
   text_layer_set_text(date_text_layer, date_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) date_text_layer);
   

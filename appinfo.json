@@ -2,7 +2,7 @@
     "appKeys": {},
     "longName": "Helvetica Text",
     "uuid": "6bdc5e04-781a-44ac-aec9-29d307d9570f",
-    "versionLabel": "1.0.1",
+    "versionLabel": "1.1.0",
     "companyName": "Jason Puglisi",
     "resources": {
         "media": [
@@ -15,19 +15,19 @@
             {
                 "file": "fonts/Helvetica-Normal.ttf",
                 "type": "font",
-                "name": "FONT_HELVETICA_30",
-                "characterRegex": "[a-z']"
+                "name": "FONT_HELVETICA_22",
+                "characterRegex": "[a-z0-9 ]"
             },
             {
                 "file": "fonts/Helvetica-Normal.ttf",
                 "type": "font",
-                "name": "FONT_HELVETICA_18",
-                "characterRegex": "[a-z0-9 ]"
+                "name": "FONT_HELVETICA_38",
+                "characterRegex": "[a-z']"
             },
             {
                 "file": "fonts/Helvetica-Bold.ttf",
                 "type": "font",
-                "name": "FONT_HELVETICA_BOLD_30",
+                "name": "FONT_HELVETICA_BOLD_38",
                 "characterRegex": "[a-z]"
             }
         ]
