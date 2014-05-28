@@ -127,8 +127,8 @@ void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
           strcpy(time3_buffer, "teen");
           break;
         case 8:
-          strcpy(time2_buffer, "eighteen");
-          strcpy(time3_buffer, "");
+          strcpy(time2_buffer, "eight");
+          strcpy(time3_buffer, "teen");
           break;
         case 9:
           strcpy(time2_buffer, "nine");
