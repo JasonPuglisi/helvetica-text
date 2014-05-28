@@ -2,10 +2,16 @@
     "appKeys": {},
     "longName": "Helvetica Text",
     "uuid": "6bdc5e04-781a-44ac-aec9-29d307d9570f",
-    "versionLabel": "1.0.0",
+    "versionLabel": "1.0.1",
     "companyName": "Jason Puglisi",
     "resources": {
         "media": [
+            {
+                "file": "images/preview.png",
+                "type": "png",
+                "name": "IMAGE_PREVIEW",
+                "menuIcon": true
+            },
             {
                 "file": "fonts/Helvetica-Normal.ttf",
                 "type": "font",
