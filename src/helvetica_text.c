@@ -4,13 +4,13 @@ Window *window;
 InverterLayer *inverter_layer;
 
 TextLayer *time1_text_layer;
-char time1_buffer[] = "xxxxxxxxxx";
+char time1_buffer[] = "xxxxxx";
 TextLayer *time2_text_layer;
-char time2_buffer[] = "xxxxxxxxxx";
+char time2_buffer[] = "xxxxxxxx";
 TextLayer *time3_text_layer;
-char time3_buffer[] = "xxxxxxxxxx";
+char time3_buffer[] = "xxxxx";
 TextLayer *date_text_layer;
-char date_buffer[] = "xxxxxxxxxxxxxxxxxxxx";
+char date_buffer[] = "xxxxxxxxxx";
 
 void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   if (units_changed & MINUTE_UNIT) {
@@ -119,8 +119,8 @@ void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
           strcpy(time3_buffer, "");
           break;
         case 6:
-          strcpy(time2_buffer, "six");
-          strcpy(time3_buffer, "teen");
+          strcpy(time2_buffer, "sixteen");
+          strcpy(time3_buffer, "");
           break;
         case 7:
           strcpy(time2_buffer, "seven");
@@ -262,24 +262,24 @@ void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 }
 
 void window_load(Window *window) {
-  time1_text_layer = text_layer_create(GRect(3, 3, 141, 64));
+  time1_text_layer = text_layer_create(GRect(1, 0, 143, 64));
   text_layer_set_background_color(time1_text_layer, GColorClear);
   text_layer_set_text_color(time1_text_layer, GColorBlack);
-  text_layer_set_font(time1_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_BOLD_38)));
+  text_layer_set_font(time1_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_BOLD_42)));
   text_layer_set_text(time1_text_layer, time1_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) time1_text_layer);
   
-  time2_text_layer = text_layer_create(GRect(3, 42, 141, 64));
+  time2_text_layer = text_layer_create(GRect(1, 40, 143, 64));
   text_layer_set_background_color(time2_text_layer, GColorClear);
   text_layer_set_text_color(time2_text_layer, GColorBlack);
-  text_layer_set_font(time2_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_38)));
+  text_layer_set_font(time2_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_42)));
   text_layer_set_text(time2_text_layer, time2_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) time2_text_layer);
   
-  time3_text_layer = text_layer_create(GRect(3, 80, 141, 64));
+  time3_text_layer = text_layer_create(GRect(1, 80, 143, 64));
   text_layer_set_background_color(time3_text_layer, GColorClear);
   text_layer_set_text_color(time3_text_layer, GColorBlack);
-  text_layer_set_font(time3_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_38)));
+  text_layer_set_font(time3_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_42)));
   text_layer_set_text(time3_text_layer, time3_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) time3_text_layer);
   
@@ -287,7 +287,7 @@ void window_load(Window *window) {
   text_layer_set_background_color(date_text_layer, GColorClear);
   text_layer_set_text_color(date_text_layer, GColorBlack);
   text_layer_set_text_alignment(date_text_layer, GTextAlignmentRight);
-  text_layer_set_font(date_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_22)));
+  text_layer_set_font(date_text_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_HELVETICA_24)));
   text_layer_set_text(date_text_layer, date_buffer);
   layer_add_child(window_get_root_layer(window), (Layer*) date_text_layer);
   
