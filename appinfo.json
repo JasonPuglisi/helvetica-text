@@ -5,24 +5,25 @@
     ],
     "companyName": "Jason Puglisi",
     "longName": "Helvetica Text",
+    "projectType": "native",
     "resources": {
         "media": [
             {
-                "characterRegex": "[a-z0-9 ]",
-                "file": "fonts/Helvetica-Normal.ttf",
-                "name": "FONT_HELVETICA_24",
+                "characterRegex": "[0-9a-z ]",
+                "file": "fonts/Helvetica.ttf",
+                "name": "FONT_HELVETICA_22",
                 "type": "font"
             },
             {
                 "characterRegex": "[a-z']",
-                "file": "fonts/Helvetica-Normal.ttf",
-                "name": "FONT_HELVETICA_42",
+                "file": "fonts/Helvetica-Light.ttf",
+                "name": "FONT_HELVETICA_LIGHT_38",
                 "type": "font"
             },
             {
                 "characterRegex": "[a-z]",
                 "file": "fonts/Helvetica-Bold.ttf",
-                "name": "FONT_HELVETICA_BOLD_42",
+                "name": "FONT_HELVETICA_BOLD_38",
                 "type": "font"
             }
         ]
@@ -30,7 +31,7 @@
     "shortName": "Helvetica Text",
     "uuid": "6bdc5e04-781a-44ac-aec9-29d307d9570f",
     "versionCode": 1,
-    "versionLabel": "1.2.0",
+    "versionLabel": "2.0",
     "watchapp": {
         "watchface": true
     }
