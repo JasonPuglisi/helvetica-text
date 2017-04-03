@@ -1,10 +1,14 @@
-Helvetica Text
-=================
+# Helvetica Text
+
+Text Watch-inspired watchface for Pebble smartwatches using the Helvetica font.
 
 Text Watch if it were made by a graphic designer.
 
-Web Preview: https://apps.getpebble.com/applications/53852972740f95161d000184
+## Overview
 
-Direct Install: pebble://appstore/53852972740f95161d000184
+Clearly presents the time and date in the elegant Helvetica typeface. Designed
+with minimalism and low battery consumption in mind.
 
-Concept & Contributions: https://github.com/Shaun-R/
+## Contributions
+
+Concept and contributions by [Shaun-R](https://github.com/Shaun-R/).
